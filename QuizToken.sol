@@ -83,7 +83,7 @@ contract MyToken {
     }
 
     function burn(uint256 amount) external onlyAdmin {
-        require(totalSupply >= amount, "You dont have enough tokens to burn");
+        require(totalSupply >= amount, "Not enough tokens to burn");
         totalSupply -= amount;
         remainingTokens -= amount;
     }
